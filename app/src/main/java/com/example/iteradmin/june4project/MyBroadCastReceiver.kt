@@ -11,10 +11,19 @@ class MyBroadCastReceiver : BroadcastReceiver() {
 
         when(s){
             Intent.ACTION_POWER_CONNECTED -> {
-                Toast.makeText(p0,"Charging",Toast.LENGTH_LONG).show()
+                Toast.makeText(p0,"Charging...",Toast.LENGTH_LONG).show()
             }
             Intent.ACTION_POWER_DISCONNECTED -> {
                 Toast.makeText(p0,"Charger Disconnected ...",Toast.LENGTH_LONG).show()
+            }
+            Intent.ACTION_AIRPLANE_MODE_CHANGED -> {
+                Toast.makeText(p0,"airplane mode changed... ",Toast.LENGTH_LONG).show()
+            }
+            Intent.ACTION_HEADSET_PLUG -> {
+                Toast.makeText(p0,"headphones plugged in... ",Toast.LENGTH_LONG).show()
+            }
+            Intent.ACTION_TIME_CHANGED -> {
+                Toast.makeText(p0,"time is changed... ",Toast.LENGTH_LONG).show()
             }
 
         }
